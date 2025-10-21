@@ -1,15 +1,15 @@
 <template>
-  <div>
-    <header>
-      <Navbar />
-    </header>
+    <div class="min-h-dvh flex flex-col bg-[#0b0809] text-white">
+        <header>
+            <Navbar />
+        </header>
 
-    <main>
-      <RouterView />
-    </main>
+        <main class="flex-1">
+            <RouterView />
+        </main>
 
-    <Footer />
-  </div>
+        <Footer />
+    </div>
 </template>
 
 <script setup>
