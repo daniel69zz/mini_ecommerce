@@ -22,11 +22,13 @@
                 >
                     <span>BIENVENIDOS A SUPERMERCADO DON OZIEL</span>
                     <span>¿QUIERES SABER MAS SOBRE NOSOTROS?</span>
-                    <button
-                        class="bg-[#009966] text-[32px] mt-[20px] p-[6px] rounded-[15px]"
-                    >
-                        VER MAS
-                    </button>
+                    <router-link to="/nosotros">
+                        <button
+                            class="bg-[#009966] text-[32px] mt-[20px] p-[6px] rounded-[15px]"
+                        >
+                            VER MAS
+                        </button>
+                    </router-link>
                 </div>
             </div>
 
