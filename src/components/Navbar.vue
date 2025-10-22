@@ -25,7 +25,7 @@
 
             <router-link
                 class="flex items-center gap-[8px] text-[#fff] no-underline"
-                to="#"
+                to="/Productos"
             >
                 <span class="font-bold">PRODUCTOS</span>
             </router-link>
