@@ -11,12 +11,11 @@
     </a>
 
     <div class="p-4 flex flex-col justify-between h-52">
-      <!-- Badge de categoría -->
       <div
         class="bg-green-700 text-white text-xs font-semibold px-2 py-1 rounded-full w-fit mb-1"
       >
         {{ producto.categoria }}
-    </div>
+      </div>
 
       <a href="#">
         <h2
@@ -57,29 +56,43 @@
           </button>
         </div>
       </div>
+      <button
+        class="bg-[#009966] mt-[5px] py-[10px] rounded-xl"
+        @click="bt_additem()"
+      >
+        + AGREGAR
+      </button>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref } from "vue";
+import { useCartStore } from "@/components/utils/cart";
+
+const cart = useCartStore();
 
 const props = defineProps({
   producto: {
     type: Object,
-    required: true
-  }
-})
+    required: true,
+  },
+});
 
-// Estado local del contador
-const cantidad = ref(0)
+const cantidad = ref(0);
 
-// Funciones
 const incrementar = () => {
-  cantidad.value++
-}
+  cantidad.value++;
+};
 
 const decrementar = () => {
-  if (cantidad.value > 0) cantidad.value--
-}
+  if (cantidad.value > 0) cantidad.value--;
+};
+
+const bt_additem = () => {
+  const qty = Math.max(0, cantidad.value);
+
+  cart.addItem(props.producto, qty);
+  cantidad.value = 0;
+};
 </script>
