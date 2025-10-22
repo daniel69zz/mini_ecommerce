@@ -7,13 +7,16 @@
         <main class="flex-1">
             <RouterView />
         </main>
-
-        <Footer />
+        
+        <footer>  
+             <Lowinfo/>   
+        </footer>
+      
     </div>
 </template>
 
 <script setup>
 import { RouterView } from "vue-router";
 import Navbar from "./components/Navbar.vue";
-import Footer from "./components/Footer.vue";
+import Lowinfo from "./components/Lowinfo.vue";
 </script>
