@@ -20,6 +20,7 @@
         :key="it.id"
         class="flex items-center justify-between p-4 rounded-xl bg-white shadow"
       >
+        <!-- CARD DE PRODUCTO -->
         <div class="flex items-center gap-4">
           <img
             v-if="it.imagen"
@@ -54,14 +55,14 @@
       </div>
 
       <div
-        class="p-4 rounded-xl bg-white shadow flex items-center justify-between"
+        class="p-4 rounded-xl bg-white text-black shadow flex items-center justify-between"
       >
         <p class="text-lg font-semibold">Subtotal</p>
         <p class="text-lg font-bold">Bs {{ subtotal.toFixed(2) }}</p>
       </div>
 
       <div class="flex gap-3">
-        <button class="px-4 py-2 rounded-xl bg-gray-200" @click="clear">
+        <button class="px-4 py-2 rounded-xl bg-black" @click="clear">
           Vaciar carrito
         </button>
         <button class="px-4 py-2 rounded-xl bg-black text-white">
@@ -90,5 +91,9 @@ function remove(id) {
 }
 function clear() {
   cart.clear();
+}
+
+function flag() {
+  console.log(cart.items);
 }
 </script>
