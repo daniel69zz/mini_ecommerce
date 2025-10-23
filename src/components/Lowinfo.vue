@@ -6,7 +6,7 @@
       class="max-w-[1200px] mx-auto py-[6px] px-[12px] grid grid-cols-1 md:grid-cols-[1.2fr_2fr] gap-[12px]"
     >
       <div>
-        <h3 class="font-bold mb-[15px]">MINIMERCADO OZIEL</h3>
+        <h3 class="font-bold mb-[15px]">MINIMARKET+</h3>
         <p>©2025 UCB Community. Todos los derechos reservados.</p>
       </div>
 

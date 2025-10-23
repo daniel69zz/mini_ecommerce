@@ -32,20 +32,6 @@
         </div>
       </div>
 
-      <!-- <div class="grid grid-cols-1 sm:grid-cols-2">
-        <img
-          src="C:\Users\HP\Downloads\depositphotos_24701081-stock-photo-shopping-cart-in-a-supermarket.jpg"
-          alt="carrito de compras"
-          class="h-[85vh]"
-        />
-        <div class="flex flex-col justify-center items-center">
-          <span class="text-center"
-            >El supermercado donde la calidad y el ahorro se encuentran</span
-          >
-          <button>VER LAS OFERTAS</button>
-        </div>
-      </div> -->
-
       <div
         class="relative ImgFondo_2 h-[85vh] w-full bg-no-repeat bg-cover bg-center"
       >
@@ -55,11 +41,13 @@
           <span class="text-center"
             >El supermercado donde la calidad y el ahorro se encuentran</span
           >
-          <button
-            class="bg-[#009966] text-[32px] my-[20px] p-[6px] rounded-[15px]"
-          >
-            VER LAS OFERTAS
-          </button>
+          <router-link to="/productos">
+            <button
+              class="bg-[#009966] text-[32px] my-[20px] p-[6px] rounded-[15px]"
+            >
+              VER LAS OFERTAS
+            </button>
+          </router-link>
         </div>
       </div>
 
