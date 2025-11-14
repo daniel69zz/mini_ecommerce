@@ -1,15 +1,17 @@
-<template class="">
+<template>
   <div class="px-8 py-10 bg-[#009966] min-h-screen">
     <h1 class="text-3xl font-bold text-gray-800 mb-8 text-center">
-      Nuestros Productos
+      {{
+        categoriaActual ? `Categoría: ${categoriaActual}` : "Nuestros Productos"
+      }}
     </h1>
 
     <div
       class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
     >
       <ProductoCard
-        v-for="(producto, index) in productos"
-        :key="index"
+        v-for="producto in productos"
+        :key="producto.id"
         :producto="producto"
       />
     </div>
@@ -18,107 +20,34 @@
 
 <script setup>
 import ProductoCard from "@/components/ProductoCard.vue";
-import { reactive, ref } from "vue";
+import { ref, watch } from "vue";
+import { useRoute } from "vue-router";
 import { data_prod } from "@/data/db";
 
+const route = useRoute();
 const productos = ref(data_prod);
+const categoriaActual = ref(null);
 
-// const productos = [
-//   {
-//     id: 1,
-//     nombre: "Insecticida Baygon 300ml",
-//     descripcion: "Elimina cucarachas y hormigas al instante.",
-//     precio: 42.5,
-//     imagen: "https://cdn-icons-png.flaticon.com/512/1553/1553031.png",
-//     categoria: "Limpieza",
-//   },
-//   {
-//     id: 2,
-//     nombre: "Aceite Fino 1L",
-//     descripcion: "Aceite vegetal de primera calidad.",
-//     precio: 25.0,
-//     imagen: "https://cdn-icons-png.flaticon.com/512/6978/6978182.png",
-//     categoria: "Comida",
-//   },
-//   {
-//     id: 3,
-//     nombre: "Detergente Ariel 800g",
-//     descripcion: "Limpieza profunda y aroma fresco.",
-//     precio: 38.9,
-//     imagen: "https://cdn-icons-png.flaticon.com/512/992/992747.png",
-//     categoria: "Limpieza",
-//   },
-//   {
-//     id: 4,
-//     nombre: "Leche Pil 1L",
-//     descripcion: "Leche entera pasteurizada, fuente de calcio.",
-//     precio: 8.5,
-//     imagen: "https://cdn-icons-png.flaticon.com/512/1046/1046784.png",
-//     categoria: "Lácteos",
-//   },
-//   {
-//     id: 5,
-//     nombre: "Arroz Grano de Oro 5kg",
-//     descripcion: "Arroz premium de grano largo y suelto.",
-//     precio: 45.0,
-//     imagen: "https://cdn-icons-png.flaticon.com/512/3595/3595455.png",
-//     categoria: "Comida",
-//   },
-//   {
-//     id: 6,
-//     nombre: "Pan de Molde Bimbo 600g",
-//     descripcion: "Pan blanco suave y esponjoso.",
-//     precio: 15.0,
-//     imagen: "https://cdn-icons-png.flaticon.com/512/415/415733.png",
-//     categoria: "Comida",
-//   },
-//   {
-//     id: 7,
-//     nombre: "Coca Cola 2L",
-//     descripcion: "Bebida gaseosa refrescante original.",
-//     precio: 16.0,
-//     imagen: "https://cdn-icons-png.flaticon.com/512/992/992501.png",
-//     categoria: "Bebidas",
-//   },
-//   {
-//     id: 8,
-//     nombre: "Huevos San Gabriel (30u)",
-//     descripcion: "Huevos frescos de granja.",
-//     precio: 28.0,
-//     imagen: "https://cdn-icons-png.flaticon.com/512/415/415731.png",
-//     categoria: "Comida",
-//   },
-//   {
-//     id: 9,
-//     nombre: "Queso Menonita 500g",
-//     descripcion: "Queso semiduro artesanal de calidad.",
-//     precio: 35.0,
-//     imagen: "https://cdn-icons-png.flaticon.com/512/1904/1904425.png",
-//     categoria: "Lácteos",
-//   },
-//   {
-//     id: 10,
-//     nombre: "Papel Higiénico Familia 12u",
-//     descripcion: "Suavidad y resistencia para toda la familia.",
-//     precio: 32.5,
-//     imagen: "https://cdn-icons-png.flaticon.com/512/992/992790.png",
-//     categoria: "Higiene",
-//   },
-//   {
-//     id: 11,
-//     nombre: "Shampoo Sedal 340ml",
-//     descripcion: "Cabello suave y con brillo natural.",
-//     precio: 22.0,
-//     imagen: "https://cdn-icons-png.flaticon.com/512/992/992790.png",
-//     categoria: "Higiene",
-//   },
-//   {
-//     id: 12,
-//     nombre: "Galletas Oreo 6u",
-//     descripcion: "Clásicas galletas de cacao con crema.",
-//     precio: 10.0,
-//     imagen: "https://cdn-icons-png.flaticon.com/512/3159/3159310.png",
-//     categoria: "Comida",
-//   },
-// ];
+const buscarPorCategoria = (categoria) => {
+  if (!categoria) {
+    productos.value = data_prod;
+    categoriaActual.value = null;
+  } else {
+    // Filtrar productos por la categoría
+    productos.value = data_prod.filter(
+      (producto) => producto.categoria === categoria
+    );
+    categoriaActual.value = categoria;
+  }
+};
+
+buscarPorCategoria(route.query.categoria);
+
+// Vigilar cambios en la URL para actualizar el filtro
+watch(
+  () => route.query.categoria,
+  (nuevaCategoria) => {
+    buscarPorCategoria(nuevaCategoria);
+  }
+);
 </script>

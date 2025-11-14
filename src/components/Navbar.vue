@@ -24,12 +24,79 @@
         <span class="font-bold">SOBRE NOSOTROS</span>
       </router-link>
 
-      <router-link
-        class="flex items-center gap-[8px] text-[#fff] no-underline"
-        to="/productos"
-      >
-        <span class="font-bold">PRODUCTOS</span>
-      </router-link>
+      <!-- Dropdown de Productos -->
+      <div class="relative group">
+        <router-link
+          class="flex items-center gap-[8px] text-[#fff] no-underline"
+          to="/productos"
+        >
+          <span class="font-bold">PRODUCTOS</span>
+        </router-link>
+
+        <!-- Lista desplegable de categorías -->
+        <div
+          class="absolute left-0 mt-2 w-48 bg-[#1a1a1a] border border-[#333] rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50"
+        >
+          <ul class="py-2">
+            <li>
+              <router-link
+                to="/productos?categoria=Abarrotes"
+                class="block px-4 py-2 text-sm text-white hover:bg-[#009966] hover:text-white transition-colors no-underline"
+              >
+                Abarrotes
+              </router-link>
+            </li>
+            <li>
+              <router-link
+                to="/productos?categoria=Bebidas"
+                class="block px-4 py-2 text-sm text-white hover:bg-[#009966] hover:text-white transition-colors no-underline"
+              >
+                Bebidas
+              </router-link>
+            </li>
+            <li>
+              <router-link
+                to="/productos?categoria=Lacteos"
+                class="block px-4 py-2 text-sm text-white hover:bg-[#009966] hover:text-white transition-colors no-underline"
+              >
+                Lácteos
+              </router-link>
+            </li>
+            <li>
+              <router-link
+                to="/productos?categoria=Carnes y Embutidos"
+                class="block px-4 py-2 text-sm text-white hover:bg-[#009966] hover:text-white transition-colors no-underline"
+              >
+                Carnes y Embutidos
+              </router-link>
+            </li>
+            <li>
+              <router-link
+                to="/productos?categoria=Frutas y Verduras"
+                class="block px-4 py-2 text-sm text-white hover:bg-[#009966] hover:text-white transition-colors no-underline"
+              >
+                Frutas y Verduras
+              </router-link>
+            </li>
+            <li>
+              <router-link
+                to="/productos?categoria=Limpieza e Higiene"
+                class="block px-4 py-2 text-sm text-white hover:bg-[#009966] hover:text-white transition-colors no-underline"
+              >
+                Limpieza e Higiene
+              </router-link>
+            </li>
+            <li>
+              <router-link
+                to="/productos?categoria=Snacks y Dulces"
+                class="block px-4 py-2 text-sm text-white hover:bg-[#009966] hover:text-white transition-colors no-underline"
+              >
+                Snacks y Dulces
+              </router-link>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
 
     <!-- Iconos (carrito y login) -->
@@ -46,7 +113,7 @@
         <span v-if="count > 0" class="text-[#fff] ml-[10px]">{{ count }}</span>
       </router-link>
 
-      <!-- Botón para abrir login -->
+      <!-- login -->
       <button
         @click="mostrarLogin = true"
         class="bg-[#009966] text-white p-[6px] rounded-[15px] hover:bg-[#00b377] transition"

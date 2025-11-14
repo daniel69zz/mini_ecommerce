@@ -27,6 +27,5 @@ export const useCartStore = defineStore("cart", {
       this.items = [];
     },
   },
-  // (Opcional) Persistencia simple con localStorage
   persist: false,
 });
