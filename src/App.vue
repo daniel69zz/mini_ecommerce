@@ -1,10 +1,12 @@
 <template>
-  <div class="min-h-dvh flex flex-col bg-[#0b0809] text-white">
+  <div
+    class="min-h-dvh flex flex-col bg-[#0b0809] text-white overflow-x-hidden"
+  >
     <header>
       <Navbar />
     </header>
 
-    <main class="flex-1">
+    <main class="flex-1 overflow-x-hidden">
       <RouterView />
     </main>
 

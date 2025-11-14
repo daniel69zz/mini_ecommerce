@@ -7,7 +7,7 @@
     >
       <div>
         <h3 class="font-bold mb-[15px]">MINIMARKET+</h3>
-        <p>©2025 UCB Community. Todos los derechos reservados.</p>
+        <p>©2025 MINIMARKET+. Todos los derechos reservados.</p>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-[24px]">

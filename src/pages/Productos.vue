@@ -2,7 +2,7 @@
   <div class="px-8 py-10 bg-[#009966] min-h-screen">
     <h1 class="text-3xl font-bold text-gray-800 mb-8 text-center">
       {{
-        categoriaActual ? `Categoría: ${categoriaActual}` : "Nuestros Productos"
+        categ_productos ? `Categoría: ${categ_productos}` : "Nuestros Productos"
       }}
     </h1>
 
@@ -26,28 +26,26 @@ import { data_prod } from "@/data/db";
 
 const route = useRoute();
 const productos = ref(data_prod);
-const categoriaActual = ref(null);
+const categ_productos = ref(null);
 
 const buscarPorCategoria = (categoria) => {
   if (!categoria) {
     productos.value = data_prod;
-    categoriaActual.value = null;
+    categ_productos.value = null;
   } else {
-    // Filtrar productos por la categoría
     productos.value = data_prod.filter(
       (producto) => producto.categoria === categoria
     );
-    categoriaActual.value = categoria;
+    categ_productos.value = categoria;
   }
 };
 
 buscarPorCategoria(route.query.categoria);
 
-// Vigilar cambios en la URL para actualizar el filtro
 watch(
   () => route.query.categoria,
-  (nuevaCategoria) => {
-    buscarPorCategoria(nuevaCategoria);
+  (n_categoria) => {
+    buscarPorCategoria(n_categoria);
   }
 );
 </script>
