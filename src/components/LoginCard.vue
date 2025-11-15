@@ -44,7 +44,6 @@
           </button>
         </form>
 
-        <!-- Botón cerrar -->
         <button
           @click="$emit('cerrar')"
           class="absolute top-2 right-3 text-black hover:text-[#f00] text-xl"

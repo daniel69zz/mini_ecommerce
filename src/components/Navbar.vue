@@ -19,7 +19,6 @@
       </h1>
     </router-link>
 
-    <!-- Navegación Desktop (oculto en mobile) -->
     <nav class="hidden lg:flex justify-around items-center w-full gap-8">
       <router-link
         class="flex items-center gap-[8px] text-[#fff] no-underline hover:text-[#009966] transition"
@@ -28,7 +27,6 @@
         <span class="font-bold">SOBRE NOSOTROS</span>
       </router-link>
 
-      <!-- Dropdown de Productos Desktop -->
       <div class="relative group">
         <router-link
           class="flex items-center gap-[8px] text-[#fff] no-underline hover:text-[#009966] transition"
@@ -37,7 +35,6 @@
           <span class="font-bold">PRODUCTOS</span>
         </router-link>
 
-        <!-- Lista desplegable de categorías Desktop -->
         <div
           class="absolute left-0 mt-2 w-48 bg-[#1a1a1a] border border-[#333] rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50"
         >
@@ -103,9 +100,9 @@
       </div>
     </nav>
 
-    <!-- Iconos Mobile y Desktop -->
+    <!-- MOBILE -->
+
     <div class="flex gap-[12px] sm:gap-[20px] items-center font-bold">
-      <!-- Icono Info (Sobre Nosotros) - Solo Mobile -->
       <router-link
         to="/Nosotros"
         class="lg:hidden text-[#fff] flex items-center hover:text-[#009966] transition"
@@ -114,7 +111,6 @@
         <Info class="w-6 h-6" />
       </router-link>
 
-      <!-- Icono Productos con Dropdown - Solo Mobile -->
       <div class="relative lg:hidden group">
         <button
           class="text-[#fff] flex items-center hover:text-[#009966] transition"
@@ -123,7 +119,6 @@
           <Package class="w-6 h-6" />
         </button>
 
-        <!-- Lista desplegable de categorías Mobile -->
         <div
           class="absolute right-0 mt-2 w-48 bg-[#1a1a1a] border border-[#333] rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50"
         >
@@ -197,7 +192,6 @@
         </div>
       </div>
 
-      <!-- Icono Carrito -->
       <router-link
         to="/cart"
         class="text-[#fff] flex items-center hover:text-[#009966] transition"
@@ -211,7 +205,6 @@
         </span>
       </router-link>
 
-      <!-- Icono/Botón Login -->
       <button
         @click="mostrarLogin = true"
         class="text-white hover:text-[#009966] transition lg:bg-[#009966] lg:px-4 lg:py-2 lg:rounded-[15px] lg:hover:bg-[#00b377]"
@@ -222,7 +215,6 @@
       </button>
     </div>
 
-    <!-- Modales -->
     <LoginCard
       v-if="mostrarLogin"
       @cerrar="mostrarLogin = false"

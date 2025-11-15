@@ -33,7 +33,7 @@
         <span class="text-lg font-bold text-green-600">
           Bs. {{ producto.precio }}
         </span>
-        <!-- Contador -->
+
         <div class="flex items-center gap-2">
           <button
             @click="decrementar"
@@ -58,7 +58,7 @@
       </div>
       <button
         class="bg-[#009966] mt-[5px] py-[10px] rounded-xl"
-        @click="bt_additem()"
+        @click="bt_additem"
       >
         + AGREGAR
       </button>
@@ -90,9 +90,9 @@ const decrementar = () => {
 };
 
 const bt_additem = () => {
-  const qty = Math.max(0, cantidad.value);
+  const min = Math.max(0, cantidad.value);
 
-  cart.addItem(props.producto, qty);
+  cart.addItem(props.producto, min);
   cantidad.value = 0;
 };
 </script>
