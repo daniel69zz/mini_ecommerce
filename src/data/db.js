@@ -19,7 +19,7 @@ export const data_prod = [
     id: 3,
     nombre: "Pasta Spaguetti 500g",
     precio: 2.25,
-    imagen: "https://images.unsplash.com/photo-1551462147-37d3f8c06c9e?w=400",
+    imagen: "https://imgs.search.brave.com/i8rlLE-CYofn1kADzy_-bnIXi1gWl1FggV3JJTjPQbs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9RX05QXzJY/XzYwNDU0OC1NTFU3/ODYxNzcxNzQ1N18w/ODIwMjQtVi53ZWJw",
     categoria: "Abarrotes",
   },
   {
@@ -35,7 +35,7 @@ export const data_prod = [
     nombre: "Harina de Trigo 1kg",
     precio: 2.99,
     imagen:
-      "https://images.unsplash.com/photo-1628173066901-9474a6a55064?w=400",
+      "https://imgs.search.brave.com/xhv6qY5esUhroDQV8XSQ4K2OMKfaaTF0sRebxegZcqw/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zZ2Zt/LmVsY29ydGVpbmds/ZXMuZXMvU0dGTS9k/Y3RtL01FRElBMDMv/MjAyNDEwLzI4LzAw/MTE4MDM3OTAwMDE4/X19fXzdfXzYwMHg2/MDAuanBn",
     categoria: "Abarrotes",
   },
 
@@ -115,7 +115,7 @@ export const data_prod = [
     nombre: "Crema de Leche 200ml",
     precio: 2.99,
     imagen:
-      "https://images.unsplash.com/photo-1628288622484-48f6ba37ddc1?w=400",
+      "https://imgs.search.brave.com/ofqQ0VQmmours-ecku1gAZsHinYHQ2yp0Cjep7y1cYk/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zdXBl/cm1lcmNhZG9zbmFj/aW9uYWwuY29tL21l/ZGlhL2NhdGFsb2cv/cHJvZHVjdC8yLzAv/MjAwMjIwMy0xLmpw/Zz9vcHRpbWl6ZT1t/ZWRpdW0mYmctY29s/b3I9MjU1LDI1NSwy/NTUmZml0PWJvdW5k/cyZoZWlnaHQ9MzAw/JndpZHRoPTI0MCZj/YW52YXM9MjQwOjMw/MA",
     categoria: "Lacteos",
   },
 
@@ -224,7 +224,7 @@ export const data_prod = [
     nombre: "Jabón de Manos 250ml",
     precio: 2.75,
     imagen:
-      "https://images.unsplash.com/photo-1585838271887-0326a4a27e90?w=400",
+      "https://imgs.search.brave.com/TIy1aAc__LSS3kDb5JmX5OzatSVvCDRbUslicu11gHw/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFjbjRTNTRVLUwu/anBn",
     categoria: "Limpieza e Higiene",
   },
   {
@@ -232,7 +232,7 @@ export const data_prod = [
     nombre: "Desinfectante 1L",
     precio: 5.25,
     imagen:
-      "https://images.unsplash.com/photo-1584245821794-53f4df6a6702?w=400",
+      "https://imgs.search.brave.com/wBUIUlOrpMW0jgrkZFcZg7NNbb3y5TP_wkwJ5xguVqM/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5hZGVvLmNvbS9t/ZWRpYS8yMzU4Mzkz/L21lZGlhLnBuZz93/aWR0aD02NTAmaGVp/Z2h0PTY1MCZmb3Jt/YXQ9anBnJnF1YWxp/dHk9ODAmZml0PWJv/dW5kcw",
     categoria: "Limpieza e Higiene",
   },
   {
