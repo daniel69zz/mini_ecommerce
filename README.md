@@ -70,9 +70,9 @@ npm run preview    # Vista previa de la build de producción
 
 ## 👨‍💻 Autores
 
-**Luis Daniel Rojas** - [@daniel69zz](https://github.com/daniel69zz)
-**Daniel Boris Rueda** - [@OddALaCream](https://github.com/OddALaCream)
-**Frederick Aguirre** - [@Holorololo](https://github.com/Holorololo)
+- **Luis Daniel Rojas** - [@daniel69zz](https://github.com/daniel69zz)
+- **Daniel Boris Rueda** - [@OddALaCream](https://github.com/OddALaCream)
+- **Frederick Aguirre** - [@Holorololo](https://github.com/Holorololo)
 
 
 ## 📞 Contacto
